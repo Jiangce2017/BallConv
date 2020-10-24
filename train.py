@@ -8,7 +8,7 @@ import torch.nn.functional as F
 from torch.nn import Sequential as Seq, Linear as Lin, ReLU, BatchNorm1d as BN, Softmax
 from torch_geometric.nn import radius, TAGConv, global_max_pool as gmp, knn
 from ballconvnet import BallConv
-from point_cloud_models import DynamicEdge
+#from point_cloud_models import DynamicEdge
 
 def MLP(channels, batch_norm=True):
     return Seq(*[
@@ -133,7 +133,7 @@ if __name__ == '__main__':
 
     
 
-    model = DynamicEdge(10)
+    model = Net()
     model_name = 'Net'
     device = torch.device('cuda:0')
     model.to(device)
